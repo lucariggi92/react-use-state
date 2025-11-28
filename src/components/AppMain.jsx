@@ -1,6 +1,6 @@
 import AppBtn from "./AppBtn"
 import AppCard from "./AppCard"
-
+import { useState } from "react";
 
 
 const btn = [
@@ -30,7 +30,10 @@ const btn = [
   }
 ];
 
+
 export default function AppMain() {
+
+  const [selectedIndex, setSelectedIndex] = useState(null);
   return (
 
     <div>
@@ -38,7 +41,11 @@ export default function AppMain() {
         {btn.map((curBtn, index) =>
           <AppBtn
             key={index}
-            title={curBtn.title} />
+            title={curBtn.title}
+            index={index}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+             />
 
         )}
       </div>
