@@ -33,7 +33,7 @@ const btn = [
 
 export default function AppMain() {
 
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   return (
 
     <div>
@@ -50,7 +50,7 @@ export default function AppMain() {
         )}
       </div>
   
-       <AppCard />
+       <AppCard  title ={btn[selectedIndex].title} description={btn[selectedIndex].description}/>
     
       
 
